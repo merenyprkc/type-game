@@ -1,0 +1,246 @@
+/* src/components/game/ResultScreen.css */
+
+.result-screen {
+  animation: fadeInScale 0.4s ease forwards;
+  width: 100%;
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.result-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+/* Main stats row */
+.result-main-stats {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--space-12);
+  margin-bottom: var(--space-10);
+}
+
+.result-stat-primary {
+  text-align: center;
+}
+
+.result-stat-primary .value {
+  font-family: var(--font-mono);
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.result-stat-primary .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+}
+
+.result-stat-secondary {
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.result-stat-secondary .value {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.result-stat-secondary .label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+/* Extra stats grid */
+.result-extra-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.result-extra-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.result-extra-card .value {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.result-extra-card .label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+/* Analytics section */
+.result-analytics {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-8);
+  width: 100%;
+}
+
+.analytics-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  width: 100%;
+  max-width: 600px;
+}
+
+.analytics-card-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+/* Error list */
+.error-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.error-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  background: rgba(202, 71, 84, 0.1);
+  border: 1px solid rgba(202, 71, 84, 0.2);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.error-item .error-key {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.error-item .error-count {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+/* Finger stats */
+.finger-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.finger-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.finger-name {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.finger-bar-wrapper {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.finger-bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+.finger-acc {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  width: 40px;
+  text-align: right;
+}
+
+/* Action buttons */
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.result-actions .btn {
+  padding: var(--space-3) var(--space-8);
+  font-size: 0.9rem;
+}
+
+/* Evaluation badge */
+.result-eval {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .result-extra-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result-analytics {
+    grid-template-columns: 1fr;
+  }
+
+  .result-stat-primary .value {
+    font-size: 3.5rem;
+  }
+
+  .result-stat-secondary .value {
+    font-size: 2rem;
+  }
+
+  .result-main-stats {
+    gap: var(--space-8);
+  }
+}

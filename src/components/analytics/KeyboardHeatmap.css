@@ -1,0 +1,104 @@
+/* src/components/analytics/KeyboardHeatmap.css */
+
+.keyboard-heatmap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.heatmap-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.keyboard-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.kb-row {
+  display: flex;
+  gap: 4px;
+}
+
+.kb-key {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: default;
+  transition: transform 0.1s, box-shadow 0.1s;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.kb-key.has-data {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.kb-key:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.kb-key.special {
+  opacity: 0.6;
+}
+
+.kb-key-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.kb-key-acc {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+/* Legend */
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.legend-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.legend-gradient {
+  width: 100px;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, hsl(0, 70%, 35%), hsl(60, 70%, 40%), hsl(120, 70%, 35%));
+}
+
+.legend-nodata {
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  margin-left: var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .keyboard-wrap {
+    transform: scale(0.75);
+    transform-origin: left center;
+  }
+}

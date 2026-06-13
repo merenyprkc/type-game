@@ -1,0 +1,40 @@
+/* src/pages/Home.css */
+
+.home-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8) 0 var(--space-12);
+}
+
+.home-top {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.home-hero-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.home-game-area {
+  width: 100%;
+  max-width: var(--game-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.custom-empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}

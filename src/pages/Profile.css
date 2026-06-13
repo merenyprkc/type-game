@@ -1,0 +1,308 @@
+/* src/pages/Profile.css */
+
+/* Profile redirect loading dots */
+.profile-loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 80px 0;
+}
+.profile-loading-dots span {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+  animation: pulse 1.2s infinite;
+}
+.profile-loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.profile-loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+/* Login gate */
+.profile-login-gate {
+  text-align: center;
+  padding: var(--space-20) var(--space-4);
+  color: var(--text-secondary);
+}
+.profile-login-gate h2 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+.gate-hint {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  margin-top: var(--space-4);
+  line-height: 1.7;
+}
+
+/* Firebase user card */
+.profile-user-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.profile-user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-dim);
+}
+
+.profile-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-user-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.profile-share-link {
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity var(--transition-base);
+}
+
+.profile-share-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.profile-page {
+  flex: 1;
+  padding: var(--space-8) 0 var(--space-16);
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+  gap: var(--space-4);
+}
+
+.profile-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+/* Summary stats */
+.profile-summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+}
+
+.profile-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.profile-stat-card:hover {
+  border-color: var(--border-focus);
+  transform: translateY(-2px);
+}
+
+.profile-stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.profile-stat-value.accent {
+  color: var(--accent);
+}
+
+.profile-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+}
+
+/* Section */
+.profile-section {
+  margin-bottom: var(--space-10);
+}
+
+.profile-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.profile-section-header .profile-section-title {
+  margin-bottom: 0;
+}
+
+.heatmap-layout-toggle {
+  display: flex;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  gap: 2px;
+}
+
+.heatmap-layout-btn {
+  padding: 3px 10px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color var(--transition-base), background-color var(--transition-base);
+  letter-spacing: 0.05em;
+}
+
+.heatmap-layout-btn:hover {
+  color: var(--text-primary);
+}
+
+.heatmap-layout-btn.active {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.profile-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+/* Recharts WPM progress chart */
+.wpm-chart-recharts {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-2) var(--space-3) var(--space-2);
+}
+
+/* History Table */
+.history-table-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.history-table th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.history-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.history-table tr:hover td {
+  background: var(--bg-hover);
+}
+
+.history-table .font-mono {
+  font-family: var(--font-mono);
+}
+
+.history-table .font-bold {
+  font-weight: 700;
+}
+
+.history-table .text-accent {
+  color: var(--accent);
+}
+
+.history-table .text-secondary {
+  color: var(--text-secondary);
+}
+
+.history-table .capitalize {
+  text-transform: capitalize;
+}
+
+/* Empty state */
+.profile-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  gap: var(--space-4);
+}
+
+.profile-empty-icon {
+  font-size: 4rem;
+}
+
+.profile-empty h2 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+}
+
+.profile-empty p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .profile-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
