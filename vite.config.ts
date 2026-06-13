@@ -9,9 +9,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'icon-source.svg', 'apple-touch-icon-180x180.png'],
       manifest: {
-        name: 'TypeGame',
-        short_name: 'TypeGame',
-        description: 'Yazı hızını ve doğruluğunu ölç, gelişimini takip et.',
+        name: 'Typra',
+        short_name: 'Typra',
+        description: 'Type. Measure. Improve.',
         theme_color: '#111111',
         background_color: '#111111',
         display: 'standalone',

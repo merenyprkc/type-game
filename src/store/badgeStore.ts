@@ -40,7 +40,7 @@ export const useBadgeStore = create<BadgeState>()(
       clearNewlyEarned: () => set({ newlyEarned: [] }),
     }),
     {
-      name: 'typegame-badges',
+      name: 'typra-badges',
       partialize: (s) => ({ earned: s.earned }), // never persist transient notification state
     }
   )

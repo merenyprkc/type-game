@@ -27,6 +27,6 @@ export const useThemeStore = create<ThemeState>()(
       customColors: { accent: '#ff6b6b', bg: '#1a1a2e' },
       setCustomColors: (customColors) => set({ customColors }),
     }),
-    { name: 'typegame-theme' }
+    { name: 'typra-theme' }
   )
 );

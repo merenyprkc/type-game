@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* ── Left: Logo ─────────────────────────────────────── */}
           <NavLink to="/" className="navbar-logo">
             <span className="navbar-logo-mark">T</span>
-            <span className="navbar-logo-text">TypeGame</span>
+            <span className="navbar-logo-text">Typra</span>
           </NavLink>
 
           {/* ── Center: Nav links ──────────────────────────────── */}

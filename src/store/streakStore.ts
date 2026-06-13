@@ -40,6 +40,6 @@ export const useStreakStore = create<StreakState>()(
         });
       },
     }),
-    { name: 'typegame-streak' }
+    { name: 'typra-streak' }
   )
 );

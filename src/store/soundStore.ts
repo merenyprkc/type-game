@@ -14,6 +14,6 @@ export const useSoundStore = create<SoundState>()(
       enabled: false,
       toggle: () => set(s => ({ enabled: !s.enabled })),
     }),
-    { name: 'typegame-sound' }
+    { name: 'typra-sound' }
   )
 );

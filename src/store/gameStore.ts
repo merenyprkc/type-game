@@ -1,5 +1,5 @@
 // src/store/gameStore.ts
-// Zustand global state for TypeGame
+// Zustand global state for Typra
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
@@ -78,7 +78,7 @@ export const useGameStore = create<GameState>()(
       setCommandPaletteOpen: (open) => set({ isCommandPaletteOpen: open }),
     }),
     {
-      name: 'typegame-storage',
+      name: 'typra-storage',
       partialize: (state) => ({
         settings: state.settings,
         history: state.history,

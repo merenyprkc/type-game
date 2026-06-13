@@ -270,7 +270,7 @@ export const useI18n = create<I18nState>()(
       setUILang: (lang) => set({ uiLang: lang, t: makeT(lang) }),
     }),
     {
-      name: 'typegame-i18n',
+      name: 'typra-i18n',
       // t is a function — not serializable; rebuild it after hydration
       onRehydrateStorage: () => (state) => {
         if (state) state.t = makeT(state.uiLang);
