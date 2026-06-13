@@ -1,6 +1,6 @@
 # Typra
 
-Monkeytype ilhamıyla geliştirilmiş, Türkçe ve İngilizce destekli modern yazı hızı ve doğruluk ölçüm uygulaması. Gerçek zamanlı analitik, kişisel geçmiş, global liderboard ve çok daha fazlası.
+Monkeytype ilhamıyla geliştirilmiş, Türkçe ve İngilizce destekli modern yazı hızı ve doğruluk ölçüm uygulaması. Gerçek zamanlı analitik, kişisel geçmiş, global liderlik tablosu ve çok daha fazlası.
 
 ## Özellikler
 
